@@ -16,4 +16,10 @@ class Course extends Model
         'cfu',
         'website'
     ];
+
+    public function teachers(){
+
+        //  Colleghiamo piu insegnanti a piu corsi
+        return $this->belongsToMany('App\Models\Course');
+    }
 }

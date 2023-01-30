@@ -16,4 +16,10 @@ class Teacher extends Model
         'office_number'
     ];
 
+    public function courses(){
+
+        //  Colleghiamo piu corsi a piu insegnanti
+        return $this->belongsToMany('App\Models\Teacher');
+    }
+
 }
