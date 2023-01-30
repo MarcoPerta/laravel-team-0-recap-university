@@ -49914,8 +49914,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! F:\Boolean\esercizi-completi\65-laravel7-university-relations-recap-struttura-base\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! F:\Boolean\esercizi-completi\65-laravel7-university-relations-recap-struttura-base\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\marca\OneDrive\Desktop\Boolean\Lavori\laravel-team-0-recap-university\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\marca\OneDrive\Desktop\Boolean\Lavori\laravel-team-0-recap-university\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
