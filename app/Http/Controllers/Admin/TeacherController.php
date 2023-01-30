@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
+use App\Models\Course;
 
 class TeacherController extends Controller
 {
@@ -69,7 +70,8 @@ class TeacherController extends Controller
     public function edit($id)
     {
         $elem = Teacher::findOrFail($id);
-        return view('admin.teachers.edit', compact('elem'));
+        $Corsi = Course::all();
+        return view('admin.teachers.edit', compact('elem', 'Corsi'));
     }
 
     /**
@@ -85,6 +87,12 @@ class TeacherController extends Controller
         $elem = Teacher::findOrFail($id);
 
         $elem->update($data);
+
+        if(array_key_exists('Corsi', $data)){
+            $elem->teachers()->sync($data['Corsi']);
+        }else{
+            $elem->teachers()->sync([]);
+        }
         return redirect()->route('admin.teachers.show', $elem->id);
     }
 
